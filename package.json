@@ -10,6 +10,18 @@
   "author": "Omer Prizner",
   "license": "ISC",
   "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "jest": "^21.2.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^src/(.*)$": "<rootDir>/src/$1",
+      "^test/(.*)$": "<rootDir>/test/$1"
+    },
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/bin/jest-transform.js"
+    }
   }
 }
